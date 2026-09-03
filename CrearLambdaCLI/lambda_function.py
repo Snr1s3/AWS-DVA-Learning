@@ -4,7 +4,7 @@ import boto3
 
 s3 = boto3.client("s3")
 
-DEST_BUCKET = "output-photos-bucket-asl"
+DEST_BUCKET = "output-for-a-lambda"
 def lambda_handler(event, context):
     # Get bucket and file name from the S3 event
     bucket = event["Records"][0]["s3"]["bucket"]["name"]
@@ -25,7 +25,6 @@ def lambda_handler(event, context):
     image_bytes = response["Body"].read()
 
     print(f"Image size: {len(image_bytes)} bytes")
-    image_bytes = response["Body"].read()
 
     # Upload it to the other bucket
     s3.put_object(
