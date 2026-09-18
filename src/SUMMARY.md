@@ -19,4 +19,4 @@
 
 # Practical Projects
 
-- [Lambda with AWS CLI](./Projects/lambda/README.md)
+- [Lambda with AWS CLI](./Projects/CrearLambdaCliSteps.md)
